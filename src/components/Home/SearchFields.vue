@@ -5,6 +5,9 @@
     role="search"
     @submit.prevent="submit"
   >
+    <b>
+      {{t("Search for events or groups")}}
+    </b>
     <div class="flex flex-col flex-wrap sm:flex-row gap-2 justify-center">
       <label class="sr-only" for="search_field_input">{{
         t("Keyword, event title, group name, etc.")
@@ -29,7 +32,7 @@
         :hide-selected="true"
         :default-text="addressDefaultText"
         labelClass="sr-only"
-        :placeholder="t('e.g. Nantes, Berlin, Cork, …')"
+        :placeholder="t('City, address, location, etc...')"
         v-on:update:modelValue="modelValueUpdate"
       >
         <o-dropdown v-model="distance" position="bottom-right" v-if="distance">
