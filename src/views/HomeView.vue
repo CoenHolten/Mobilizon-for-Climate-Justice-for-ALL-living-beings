@@ -33,6 +33,7 @@
   <!-- Search fields -->
   <short-search></short-search>
   <search-fields
+    v-if="!isLoggedIn"
     v-model:search="search"
     v-model:address="userAddress"
     v-model:distance="distance"
